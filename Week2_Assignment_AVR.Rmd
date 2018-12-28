@@ -1,0 +1,29 @@
+---
+title: "Assignment2 AVR"
+author: "AVR"
+date: "December 28, 2018"
+output:
+    slidy_presentation: default
+    ioslides_presentation: default
+---
+
+##Quezon Memorial Circle
+Quezon Memorial Circle is one of the National Parks in the Philippines.  It has a mausoleum (*Quezon Memorial Shrine*) where the remains of the second official President of the Philippines, **Manuel L. Quezon**, is contained.
+
+```{r, eval=FALSE, echo=FALSE}
+library(leaflet)
+
+QMC <- leaflet() %>%
+  addTiles()
+QMC
+```
+
+```{r, echo=FALSE}
+library(leaflet)
+
+QMC <- leaflet() %>%
+  addTiles() %>%
+  addMarkers(lat=14.651489, lng=121.049309, popup="This is where Pres. Manuel L. Quezon's remains is")
+QMC
+```
+
